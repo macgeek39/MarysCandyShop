@@ -1,0 +1,15 @@
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\bin\Debug\net8.0\MarysCandyShop.exe
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\bin\Debug\net8.0\MarysCandyShop.deps.json
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\bin\Debug\net8.0\MarysCandyShop.runtimeconfig.json
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\bin\Debug\net8.0\MarysCandyShop.dll
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\bin\Debug\net8.0\MarysCandyShop.pdb
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\obj\Debug\net8.0\MarysCandyShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\obj\Debug\net8.0\MarysCandyShop.AssemblyInfoInputs.cache
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\obj\Debug\net8.0\MarysCandyShop.AssemblyInfo.cs
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\obj\Debug\net8.0\MarysCandyShop.csproj.CoreCompileInputs.cache
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\obj\Debug\net8.0\MarysCandyShop.sourcelink.json
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\obj\Debug\net8.0\MarysCandyShop.dll
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\obj\Debug\net8.0\refint\MarysCandyShop.dll
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\obj\Debug\net8.0\MarysCandyShop.pdb
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\obj\Debug\net8.0\MarysCandyShop.genruntimeconfig.cache
+C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\obj\Debug\net8.0\ref\MarysCandyShop.dll
