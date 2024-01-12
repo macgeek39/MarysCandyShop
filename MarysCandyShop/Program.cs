@@ -20,3 +20,26 @@ Console.WriteLine("Today's target achieved: " + targetAchieved);
 Console.WriteLine(divide);
 Console.WriteLine(menu);
 Console.ReadLine();
+
+string usersChoice = Console.ReadLine().Trim().ToUpper();
+
+if (usersChoice == "A")
+{
+    Console.WriteLine("User choose A");
+} 
+else if (usersChoice == "V")
+{
+    Console.WriteLine("User choose V");
+}
+else if (usersChoice == "D")
+{
+    Console.WriteLine("User choose D");
+}
+else if (usersChoice == "U")
+{
+    Console.WriteLine("User choose U");
+}
+else
+{
+    Console.WriteLine("Invalid choice. Please choose one of the above");
+}
