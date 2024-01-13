@@ -1,5 +1,11 @@
-﻿var isMenuRunning = true;
+﻿string docPath = @"C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\history.txt";
+string[] candyNames =
+{
+    "Snickers","Kit Kat","Twix", "M&M's", "Reese's Peanut Butter Cups", "Hershey's Milk Chocolate"
+};
+var isMenuRunning = true;
 var products = new List<string>();
+
 
 while (isMenuRunning)
 {
@@ -24,6 +30,7 @@ while (isMenuRunning)
             break;
         case "Q":
             menuMessage = "Good Bye!";
+            SaveProducts();
             isMenuRunning = false;
             break;
         default:
@@ -71,6 +78,18 @@ int GetDaysSinceOpening()
     TimeSpan timeDifference = DateTime.Now - openingDate;
 
     return timeDifference.Days;
+}
+
+void SaveProducts()
+{
+    using (StreamWriter outputFile = new StreamWriter(docPath))
+    {
+        foreach(string product in products)
+        {
+            outputFile.WriteLine(product);
+        }
+    }
+    Console.WriteLine("Products saved.");
 }
 
 void PrintHeader()
