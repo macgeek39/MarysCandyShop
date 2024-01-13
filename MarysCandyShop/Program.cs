@@ -3,8 +3,12 @@ string[] candyNames =
 {
     "Snickers","Kit Kat","Twix", "M&M's", "Reese's Peanut Butter Cups", "Hershey's Milk Chocolate"
 };
+var products = new Dictionary<int, string>();
+SeedData();
+
+
 var isMenuRunning = true;
-var products = new List<string>();
+
 
 
 while (isMenuRunning)
@@ -34,7 +38,7 @@ while (isMenuRunning)
             isMenuRunning = false;
             break;
         default:
-            Console.WriteLine(menuMessage);
+            Console.WriteLine("Invalid choice. Please choose one of the above");
             break;
     }
     Console.WriteLine(menuMessage);
@@ -42,6 +46,13 @@ while (isMenuRunning)
     Console.Clear();
 }
 
+void SeedData()
+{
+    for (int i = 0; i < candyNames.Length; i++)
+    {
+        products.Add(i, candyNames[i]);
+    }
+}
 
 void ViewProduct(string message)
 {
@@ -51,7 +62,8 @@ void AddProduct()
 {
     Console.WriteLine("Product Name: ");
     var product = Console.ReadLine();
-    products.Add(product);
+    var index = products.Count();
+    products.Add(index, product);
 }
 void DeleteProduct(string message)
 {
@@ -84,9 +96,9 @@ void SaveProducts()
 {
     using (StreamWriter outputFile = new StreamWriter(docPath))
     {
-        foreach(string product in products)
+        foreach(KeyValuePair<int, string> product in products)
         {
-            outputFile.WriteLine(product);
+            outputFile.WriteLine($"{product.Key},{product.Value}");
         }
     }
     Console.WriteLine("Products saved.");

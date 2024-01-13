@@ -1,2 +1,7 @@
-snickers
-kit kat
+0,Snickers
+1,Kit Kat
+2,Twix
+3,M&M's
+4,Reese's Peanut Butter Cups
+5,Hershey's Milk Chocolate
+6,cake
