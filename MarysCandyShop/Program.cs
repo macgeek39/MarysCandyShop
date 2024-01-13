@@ -1,26 +1,39 @@
-﻿PrintHeader();
+﻿var isMenuRunning = true;
 
-var usersChoice = Console.ReadLine().Trim().ToUpper();
-
-
-switch (usersChoice)
+while (isMenuRunning)
 {
-    case "A":
-        ViewProduct("User choose A");
-        break;
-    case "V":
-        AddProduct("User choose V");
-        break;
-    case "D":
-        DeleteProduct("User choose D");
-        break;
-    case "U":
-        UpdateProduct("User choose U");
-        break;
-    default:
-        Console.WriteLine("Invalid choice. Please choose one of the above");
-        break;
+    PrintHeader();
+
+    var usersChoice = Console.ReadLine().Trim().ToUpper();
+    var menuMessage = "Press Any Key To Go Back to Menu";
+
+    switch (usersChoice)
+    {
+        case "A":
+            ViewProduct("User choose A");
+            break;
+        case "V":
+            AddProduct("User choose V");
+            break;
+        case "D":
+            DeleteProduct("User choose D");
+            break;
+        case "U":
+            UpdateProduct("User choose U");
+            break;
+        case "Q":
+            menuMessage = "Good Bye!";
+            isMenuRunning = false;
+            break;
+        default:
+            Console.WriteLine(menuMessage);
+            break;
+    }
+    Console.WriteLine(menuMessage);
+    Console.ReadLine();
+    Console.Clear();
 }
+
 
 void ViewProduct(string message)
 {
@@ -45,7 +58,8 @@ string GetMenu()
     + 'V' + " to view products \n"
     + 'A' + " to add products \n"
     + 'D' + " to delete products \n"
-    + 'U' + " to update products \n";
+    + 'U' + " to update products \n"
+    + 'Q' + " to quit the program  \n";
 }
 
 int GetDaysSinceOpening()
