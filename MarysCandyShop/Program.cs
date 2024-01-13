@@ -1,4 +1,5 @@
 ﻿var isMenuRunning = true;
+var products = new List<string>();
 
 while (isMenuRunning)
 {
@@ -10,10 +11,10 @@ while (isMenuRunning)
     switch (usersChoice)
     {
         case "A":
-            ViewProduct("User choose A");
+           AddProduct();
             break;
         case "V":
-            AddProduct("User choose V");
+            ViewProduct("User choose V");
             break;
         case "D":
             DeleteProduct("User choose D");
@@ -39,9 +40,11 @@ void ViewProduct(string message)
 {
     Console.WriteLine(message);
 }
-void AddProduct(string message)
+void AddProduct()
 {
-    Console.WriteLine(message);
+    Console.WriteLine("Product Name: ");
+    var product = Console.ReadLine();
+    products.Add(product);
 }
 void DeleteProduct(string message)
 {
