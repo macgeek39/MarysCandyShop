@@ -4,7 +4,13 @@ string[] candyNames =
     "Snickers","Kit Kat","Twix", "M&M's", "Reese's Peanut Butter Cups", "Hershey's Milk Chocolate"
 };
 var products = new Dictionary<int, string>();
-SeedData();
+var divide = "----------------------------------";
+// SeedData();
+
+if (File.Exists(docPath))
+{
+    LoadData();
+};
 
 
 var isMenuRunning = true;
@@ -24,7 +30,7 @@ while (isMenuRunning)
            AddProduct();
             break;
         case "V":
-            ViewProduct("User choose V");
+            ViewProducts();
             break;
         case "D":
             DeleteProduct("User choose D");
@@ -54,16 +60,21 @@ void SeedData()
     }
 }
 
-void ViewProduct(string message)
+void ViewProducts()
 {
-    Console.WriteLine(message);
+    Console.WriteLine(divide);
+    foreach (var product in products)
+    {
+        Console.WriteLine($"{product.Key}.{product.Value}");
+    }
+    Console.WriteLine(divide);
 }
 void AddProduct()
 {
     Console.WriteLine("Product Name: ");
     var product = Console.ReadLine();
     var index = products.Count();
-    products.Add(index, product);
+    products.Add(index, product.Trim());
 }
 void DeleteProduct(string message)
 {
@@ -123,4 +134,20 @@ Today's profit: {todaysProfit} $
 Today's target achieved: {targetAchieved}
 {divide}
 {menu}");
+}
+
+void LoadData()
+{
+    using (StreamReader reader = new (docPath))
+    {
+        var line = reader.ReadLine();
+        
+
+        while(line !=null)
+        {
+            string[] parts = line.Split(',');
+            products.Add(int.Parse(parts[0]), parts[1]);
+            line = reader.ReadLine();
+        }
+    }
 }
