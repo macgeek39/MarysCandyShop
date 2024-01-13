@@ -1,4 +1,4 @@
-﻿// Switch
+﻿// Method
 var title = "Mary's Candy Shop";
 var divide = "----------------------------------";
 var dateTime = DateTime.Now;
@@ -26,18 +26,35 @@ var usersChoice = Console.ReadLine().Trim().ToUpper();
 switch (usersChoice)
 {
     case "A":
-        Console.WriteLine("User choose A");
+        ViewProduct("User choose A");
         break;
     case "V":
-        Console.WriteLine("User choose V");
+        AddProduct("User choose V");
         break;
     case "D":
-        Console.WriteLine("User choose D");
+        DeleteProduct("User choose D");
         break;
     case "U":
-        Console.WriteLine("User choose U");
+        UpdateProduct("User choose U");
         break;
     default:
         Console.WriteLine("Invalid choice. Please choose one of the above");
         break;
+}
+
+void ViewProduct(string message)
+{
+    Console.WriteLine(message);
+}
+void AddProduct(string message)
+{
+    Console.WriteLine(message);
+}
+void DeleteProduct(string message)
+{
+    Console.WriteLine(message);
+}
+void UpdateProduct(string message)
+{
+    Console.WriteLine(message);
 }
