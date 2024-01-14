@@ -1,4 +1,9 @@
-﻿string docPath = @"C:\Users\taiwe\Documents\cSharp\MarysCandyShopApp\MarysCandyShop\history.txt";
+﻿using MarysCandyShop;
+
+Product product = new Product("Chocolate Cake");
+
+Configuration configuration = new Configuration();
+
 string[] candyNames =
 {
     "Snickers","Kit Kat","Twix", "M&M's", "Reese's Peanut Butter Cups", "Hershey's Milk Chocolate"
@@ -107,7 +112,7 @@ void SaveProducts()
 {
     try
     {
-        using (StreamWriter outputFile = new StreamWriter(docPath))
+        using (StreamWriter outputFile = new StreamWriter(Configuration.docPath))
         {
             foreach (KeyValuePair<int, string> product in products)
             {
@@ -149,7 +154,7 @@ void LoadData()
 {
     try
     {
-        using (StreamReader reader = new(docPath))
+        using (StreamReader reader = new(Configuration.docPath))
         {
             var line = reader.ReadLine();
 
