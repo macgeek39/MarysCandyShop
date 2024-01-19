@@ -2,9 +2,15 @@
 
 internal class Product
 {
-    internal string Name;
-    public Product(string name)
+    private string name;
+
+    internal string GetName()
     {
-        Name = name;
+        return name;
+    }
+
+    internal string SetName(string value)
+    {
+        name = value;
     }
 }
